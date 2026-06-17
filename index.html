@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd1dc, #fff0f5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: white;
+      max-width: 650px;
+      padding: 35px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+
+    img {
+      width: 150px;
+      border-radius: 15px;
+      margin: 10px;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Hey beautiful ❤️</h1>
+
+    <p>
+      I know you're upset about your haircut right now,
+      but I hope you know that when I look at you,
+      I still see the same amazing girl I fell for.
+    </p>
+
+    <button onclick="showMessage()">
+      Click for a reminder ✨
+    </button>
+
+    <p id="message"></p>
+  </div>
+
+  <script>
+    const messages = [
+      "You're beautiful no matter what ❤️",
+      "Hair grows. You're still gorgeous.",
+      "I'm still crushing on you.",
+      "Your smile beats any haircut.",
+      "You're my favorite person."
+    ];
+
+    function showMessage() {
+      const random =
+        messages[Math.floor(Math.random() * messages.length)];
+
+      document.getElementById("message").innerText = random;
+    }
+  </script>
+
+</body>
+</html>
